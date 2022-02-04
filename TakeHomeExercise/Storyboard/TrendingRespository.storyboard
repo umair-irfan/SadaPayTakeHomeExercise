@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Obu-4r-S5T">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trending Repository View Controller-->
+        <scene sceneID="sJq-1e-Xla">
+            <objects>
+                <viewController storyboardIdentifier="TrendingRepositoryViewController" id="Obu-4r-S5T" customClass="TrendingRepositoryViewController" customModule="TakeHomeExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vQ9-zi-Fwn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCB-ea-1Uk" customClass="NetworkErrorView" customModule="TakeHomeExercise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tjX-SF-b6M">
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jcr-0K-uux"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XCB-ea-1Uk" firstAttribute="centerY" secondItem="tjX-SF-b6M" secondAttribute="centerY" id="3DH-l3-VCH"/>
+                            <constraint firstItem="Jcr-0K-uux" firstAttribute="trailing" secondItem="tjX-SF-b6M" secondAttribute="trailing" id="Eoc-jp-NAR"/>
+                            <constraint firstItem="XCB-ea-1Uk" firstAttribute="width" secondItem="tjX-SF-b6M" secondAttribute="width" id="Ixf-2v-UD3"/>
+                            <constraint firstItem="tjX-SF-b6M" firstAttribute="leading" secondItem="Jcr-0K-uux" secondAttribute="leading" id="L3a-JZ-997"/>
+                            <constraint firstItem="XCB-ea-1Uk" firstAttribute="height" secondItem="tjX-SF-b6M" secondAttribute="height" id="MUA-0w-erU"/>
+                            <constraint firstItem="tjX-SF-b6M" firstAttribute="top" secondItem="Jcr-0K-uux" secondAttribute="top" constant="20" id="Mfn-pT-Ere"/>
+                            <constraint firstItem="Jcr-0K-uux" firstAttribute="bottom" secondItem="tjX-SF-b6M" secondAttribute="bottom" id="STd-KG-em6"/>
+                            <constraint firstItem="XCB-ea-1Uk" firstAttribute="centerX" secondItem="tjX-SF-b6M" secondAttribute="centerX" id="ztp-jr-mw7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorView" destination="XCB-ea-1Uk" id="RAC-mN-2Gr"/>
+                        <outlet property="repoTableView" destination="tjX-SF-b6M" id="7EQ-VE-wKi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1af-T1-D1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385.50724637681162" y="-395.08928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

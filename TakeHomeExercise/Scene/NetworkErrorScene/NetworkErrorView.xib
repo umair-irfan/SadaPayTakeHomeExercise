@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NetworkErrorView" customModule="TakeHomeExercise" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="fAW-Mf-TPJ" id="Tfq-vH-8Xq"/>
+                <outlet property="retryButton" destination="IuW-7Y-7Sj" id="aWc-sA-Q8b"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="GRi-ec-xh7">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAW-Mf-TPJ">
+                    <rect key="frame" x="20.5" y="67" width="373" height="448"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-WK-T62">
+                    <rect key="frame" x="20.5" y="535" width="373" height="123"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcU-ii-LBM">
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An alien is probably blocking your signal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-BZ-w5i">
+                            <rect key="frame" x="0.0" y="43.5" width="373" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuW-7Y-7Sj">
+                            <rect key="frame" x="0.0" y="83" width="373" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="x8m-My-dsi"/>
+                            </constraints>
+                            <state key="normal" title="RETRY">
+                                <color key="titleColor" red="0.035294117649999998" green="0.67450980390000004" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="4p3-Po-chf"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KMt-WK-T62" firstAttribute="top" secondItem="fAW-Mf-TPJ" secondAttribute="bottom" constant="20" id="AhS-Y8-WeW"/>
+                <constraint firstItem="fAW-Mf-TPJ" firstAttribute="centerY" secondItem="GRi-ec-xh7" secondAttribute="centerY" multiplier="0.65" id="GMX-gP-xY2"/>
+                <constraint firstItem="KMt-WK-T62" firstAttribute="leading" secondItem="fAW-Mf-TPJ" secondAttribute="leading" id="XUP-Ca-Wuu"/>
+                <constraint firstItem="KMt-WK-T62" firstAttribute="trailing" secondItem="fAW-Mf-TPJ" secondAttribute="trailing" id="gGu-dE-XWL"/>
+                <constraint firstItem="fAW-Mf-TPJ" firstAttribute="width" secondItem="GRi-ec-xh7" secondAttribute="width" multiplier="0.9" id="gVr-n7-NkR"/>
+                <constraint firstItem="fAW-Mf-TPJ" firstAttribute="centerX" secondItem="GRi-ec-xh7" secondAttribute="centerX" id="igU-YL-Zf1"/>
+                <constraint firstItem="fAW-Mf-TPJ" firstAttribute="height" secondItem="GRi-ec-xh7" secondAttribute="height" multiplier="0.5" id="uGT-5s-fsd"/>
+            </constraints>
+            <point key="canvasLocation" x="72" y="-557"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
